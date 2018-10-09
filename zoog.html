@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script>
+     function setup() {
+  createCanvas(800, 800);
+}
+
+function draw() {
+  stroke("black");
+  background(220);
+  background("white")
+  //background size and color
+  
+  noFill();
+  strokeWeight(6)
+  rect(245,330,280,370)
+  //outline of card, (thickness,width/length, and location) 
+  
+  fill('black')
+  ellipse(290,430,20,20)
+  //first circle for left eye for card
+  
+  ellipse(310,430,20,20)  
+  //second circle for left eye for card
+  
+  ellipse(450,430,20,20)
+  //first circle for right eye on card
+  
+  ellipse(470,430,20,20)
+  //second circle for right eye on card
+
+  triangle(290, 430, 300,500, 310, 430);
+  //triangle stretched under left eye to create visual effect
+  
+  triangle(450,430,460,465,470,430);
+  //triangle stretched under right eye to create visual effect
+  
+  noFill();
+  beginShape(TRIANGLE_STRIP);
+	vertex(350, 630);
+	vertex(350, 550);
+	vertex(370, 615);
+	vertex(380, 550);
+	vertex(390, 600);
+	vertex(400, 540);
+	vertex(415, 590);
+	endShape();
+  //vertexes to create vicious teeth
+  
+  point(300,525)//left point underneath card's eyes
+  point(460,480)//right point underneath card's eyes
+  //points under stretched eyes to create mime visualization 
+  
+  rect(300, 160, 15, 25, 110);
+  //left pupil of Pinocchio
+  
+  rect(440, 130, 15, 25, 110);
+  //right pupil of Pinocchio
+ 
+	bezier(485, 220, 410, 210, 390, 280, 315, 250); //top bezier/lip
+  bezier(485, 220, 410, 350, 350, 280, 315, 250); //lower bezier/lip
+  //two beziers attached to create smile
+
+  line(250, 85, 335, 105);
+  //left eyebrow of Pinocchio
+  
+  line(515 ,85 ,430 ,105);
+  //right eyebrow of Pinocchio
+  
+  rect(280, 130, 55, 55, 20, 15, 10, 5); //left eye of Pinocchio
+  rect(420, 130, 55, 55, 20, 15, 10, 5); //right eye of Pinocchio
+  //small rectangles but they have radii to create the round edges for eyes
+  
+  line(200,300,100,385)
+  //upper part of left arm
+   
+  line(245,600,100,385)
+  //lower part of left arm
+  
+  line(600,300,700,385)
+  //upper part of right arm
+
+  line(520,600,700,385)
+  //lower part of right arm
+  
+  fill("black")
+  ellipse(250,600,20,20)
+  //left hand
+  
+  ellipse(525,594,20,20)
+  //right hand
+  
+  line(200,199,398,199)
+  //upper line of nose
+  
+  line(200,210,398,210)
+  //bottom line of nose
+  
+  stroke("tan");
+  line(200,205,397,205)
+  //fills in center of nose as tan color (this color is emphasized to protrude long nose as effect of lies told)
+  
+  stroke("black");
+  line(200,210,200,200)
+  //small line connecting tip of nose
+
+  stroke("black");
+  strokeWeight(1)
+  textSize(25)
+  textStyle(ITALIC);
+  text("Pinocchio did 'nothing' wrong", 230, 50)
+  //text claiming the "innocence" of Pinocchio (who is here depicted as a bad person playing with the mind of a two of clubs card)
+  
+  fill("brown")
+  arc(405, 250, -65, 129, 0, PI + QUARTER_PI, CHORD);
+  //tongue of Pinocchio (color brown used because it's a less brighter version of red)
+  
+  strokeWeight(3)
+  line(200,300,300,285)
+  //left shoulder of Pinocchio
+  
+  line(600,299,500,285)
+  //right shoulder of Pinocchio
+  
+  line(245,600,200,300)
+  //upper left part of Pinocchio's body
+  
+  line(245,600,200,700)
+  //lower left part of Pinocchio's body
+  
+  line(525,600,600,300)
+  //upper right part of Pinocchio's body
+  
+  line(525,600,570,700)
+  //lower right part of Pinocchio's body
+  
+}
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/MariamYK/p5js/blob/master/zoog.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
